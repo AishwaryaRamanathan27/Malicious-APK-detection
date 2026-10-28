@@ -1,0 +1,5 @@
+BACKEND/venv/
+BACKEND/__pycache__/
+BACKEND/*.apk
+BACKEND/*.db
+BACKEND/uploads/*

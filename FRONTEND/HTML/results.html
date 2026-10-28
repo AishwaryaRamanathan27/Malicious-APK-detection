@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APK Security Analyzer - Results</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1>APK Security Analyzer</h1>
+            </div>
+            <a href="/" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Analyze Another APK
+            </a>
+        </header>
+
+        <main>
+            <div class="results-header">
+                <div class="apk-info">
+                    <div class="apk-icon">
+                        <i class="fas fa-android"></i>
+                    </div>
+                    <div class="apk-details">
+                        <h2 id="apkName">Sample_App.apk</h2>
+                        <p id="apkDetails">Version: 1.0.0 | Package: com.example.app</p>
+                    </div>
+                </div>
+                
+                <div class="risk-summary">
+                    <div class="risk-score">
+                        <h3>Risk Score</h3>
+                        <div class="score-circle" id="scoreCircle">
+                            <span id="riskScore">65</span>
+                        </div>
+                    </div>
+                    <div class="risk-level">
+                        <h3>Risk Level</h3>
+                        <div class="level-badge" id="riskLevel">MEDIUM</div>
+                        <p id="riskDescription">Moderate security concerns detected</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card permissions-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-key"></i> Permissions Analysis</h3>
+                        <span class="count-badge" id="permissionCount">15 Permissions</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="permissions-list" id="permissionsList">
+                            <!-- Permissions will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-card threats-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Detected Threats</h3>
+                        <span class="count-badge" id="threatsCount">3 Threats</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="threats-list" id="threatsList">
+                            <!-- Threats will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-card summary-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-pie"></i> Security Summary</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="summary-stats">
+                            <div class="stat">
+                                <div class="stat-label">Critical Issues</div>
+                                <div class="stat-value" id="criticalIssues">2</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-label">High Risk Permissions</div>
+                                <div class="stat-value" id="highRiskPerms">5</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-label">Suspicious Activities</div>
+                                <div class="stat-value" id="suspiciousActivities">3</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-label">Analysis Date</div>
+                                <div class="stat-value" id="analysisDate">2023-10-15</div>
+                            </div>
+                        </div>
+                        <div class="recommendations">
+                            <h4>Recommendations</h4>
+                            <ul id="recommendationsList">
+                                <!-- Recommendations will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-card actions-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-download"></i> Report & Actions</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="action-buttons">
+                            <button class="btn-action" id="downloadReport">
+                                <i class="fas fa-file-pdf"></i> Download Full Report
+                            </button>
+                            <button class="btn-action" id="shareResults">
+                                <i class="fas fa-share-alt"></i> Share Results
+                            </button>
+                            <button class="btn-action" id="viewDetails">
+                                <i class="fas fa-search-plus"></i> View Detailed Analysis
+                            </button>
+                        </div>
+                        <div class="scan-info">
+                            <p><i class="fas fa-clock"></i> Scan Duration: <span id="scanDuration">45 seconds</span></p>
+                            <p><i class="fas fa-database"></i> Database Version: <span id="dbVersion">2023.10</span></p>
+                            <p><i class="fas fa-code-branch"></i> Scanner Engine: <span id="scannerEngine">v2.5.1</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="disclaimer">
+                <p><i class="fas fa-info-circle"></i> <strong>Disclaimer:</strong> This analysis is based on automated static analysis. It may not detect all security issues. For critical applications, consider professional security audit.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>APK Security Analyzer &copy; 2023 | Results are generated for informational purposes only</p>
+        </footer>
+    </div>
+
+    <script src="../JS/results.js"></script>
+</body>
+</html>
